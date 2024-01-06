@@ -33,3 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
 function redirectToMoreProjects() {
   window.location.href = 'more.html';
 }
+function downloadResume() {
+  const resumePath = 'https://drive.google.com/file/d/1JrEhX1r-b4IwMG3872ANjjDoYXWGKZ-0/view?usp=sharing';
+  const downloadLink = document.createElement('a');
+  downloadLink.href = resumePath;
+  downloadLink.download = 'Sanidhya_Tiwari_Resume.pdf';
+
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+
+  document.body.removeChild(downloadLink);
+}
